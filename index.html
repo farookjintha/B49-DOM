@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+    /* CSS */
+    .heading1{
+        color: red;
+    }
+
+    #heading3{
+        color: yellow;
+    }
+
+    h2{
+        color: blue;
+    }
+    </style> -->
+
+    <script>
+        var myHTTP = new XMLHttpRequest(); //create an instance for the XMLHTTPRequest
+        
+        myHTTP.open('GET', 'https://jsonplaceholder.typicode.com/users');
+        myHTTP.send();
+
+        myHTTP.onload = function() {
+            if(myHTTP.status == 200){
+                console.log('Users: ', myHTTP.response);
+                document.getElementById('users').innerHTML = myHTTP.response;
+            }
+            if(myHTTP.status !== 200){
+                console.log('Error:');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- <h1 class="heading1">Hello World</h1>
+    <h2>Hello world</h2>
+    <h3 id="heading3">Hello world</h3>
+    <div>
+        How are you!
+    </div> -->
+
+    <div id="users"></div>
+
+</body>
+</html>
