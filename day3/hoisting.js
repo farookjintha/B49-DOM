@@ -45,3 +45,12 @@ myFunc();
 // console.log(value1)
 // console.log(value2)
 // console.log(value3)
+
+
+
+// To commit our changes to existing 
+// git add .
+// git commit -m 'commit msg'
+// git push
+
+
