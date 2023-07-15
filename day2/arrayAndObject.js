@@ -19,8 +19,6 @@ var userDetails = {
 // i-- -> i = i - 1
 var numbers = [10, 20 ,30, 40 ,50 ,60, 70, 80, 90, 100];
 
-
-
 for(var i = 0; i < numbers.length; i++){
     // console.log('Index: ' , i);
     // console.log('Value: ', numbers[i])
@@ -28,11 +26,8 @@ for(var i = 0; i < numbers.length; i++){
     // console.log('Index: ' + i + "; Value: " + numbers[i]);
 
     // console.log(`Index: ${i}; Value: ${numbers[i]}`);
-
-    console.log(`Value: ${numbers[i]}; MulitpleOf5: ${numbers[i] * 5} `)
-
-}
-
+    console.log(`Value: ${numbers[i]}; MulitpleOf5: ${numbers[i] * 5}`) //template literals or string literals
+};
 
 // for..in -> index (Array and Object)
 // for..of -> value (Array)
@@ -75,17 +70,20 @@ function getUserDetails(...params){
     const email = params[1];
     const address = params[2];
 
-    if(username){
+    if(username){  // '', null, undefined -> false,  'abc', 123 -> true
         console.log("Username: ", username);
     }
     if(email){
-        console.log('Email: ', email)
+        console.log("Email: ", email)
     }
     if(address){
-        console.log('Address: ', address);
+        console.log("Address: ", address);
     }
     
 }
+
+// '' => 'a', 'b', 'c'
+// "" => "abc"
 
 getUserDetails('karthik', 'karthik@gmail.com');
 getUserDetails('preethi');

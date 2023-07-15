@@ -19,9 +19,10 @@ let number;
 if(city = 'Chennai'){
     number = 100;
     const value = 'xyz';
-    var mobile = '1234555666';
+    var mobile = '1234555666'; //Global Scope
 }
 
+console.log(number);
 // console.log(number);
 // console.log(mobile);
 // console.log(value);
@@ -52,5 +53,3 @@ myFunc();
 // git add .
 // git commit -m 'commit msg'
 // git push
-
-
