@@ -76,7 +76,7 @@ lebronObj.greetUser();
 // myObj.greetUser();
 // console.log(myObj.xyz);
 
-// Prototype -> metadata(info) of the object
+// Prototype -> metadata(info) of the class. It shows all the properties defined inside the class
 
 // Everthing in JS is an object
 
@@ -87,3 +87,25 @@ lebronObj.greetUser();
 // console.log('My Obj Details:')
 // console.log(userObj.__proto__);
 // console.log(User.prototype);
+
+function myFunc(){
+
+}
+
+myFunc.__proto__
+
+
+const userDetails = {
+    name: 'Arvind'
+}
+
+userDetails.__proto__
+// Object.prototype
+
+const arr = [1, 2, 4]
+
+arr.__proto__
+
+arr.map()
+
+arr.reduce();

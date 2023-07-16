@@ -37,15 +37,38 @@ var result4 = sampleArr.filter((value, currentIndex) => {
     }
 })
 
-var repeatingNumber = sampleArr.filter((value, currentIndex) => {
-    if(sampleArr.indexOf(value) !== currentIndex){
+var sampleArr = [10, 12, 10, 13, 11, 13, 17];  // 12, 11, 17
+// sampleArr.indexOf(10) -> 0
+// sampleArr.lastIndexOf(10) -> 2
+
+// sampleArr.indexOf(12) -> 1
+// sampleArr.lastIndexOf(12) -> 1 -> true
+
+// sampleArr.indexOf(10) -> 0
+// sampleArr.lastIndexOf(10) -> 2
+
+// sampleArr.indexOf(13) -> 3
+// sampleArr.lastIndexOf(13) -> 5
+
+// sampleArr.indexOf(11) -> 4
+// sampleArr.lastIndexOf(11) -> 4 -> true
+
+// sampleArr.indexOf(13) -> 3
+// sampleArr.lastIndexOf(13) -> 5
+
+// sampleArr.indexOf(17) -> 6
+// sampleArr.lastIndexOf(17) -> 6 -> true
+
+
+var unique = sampleArr.filter((value, currentIndex) => {
+    if(sampleArr.indexOf(value) === sampleArr.lastIndexOf(value) ){
         return value;
     }
 })
 
 
-console.log('Unique Values: ', result4)
-console.log('Repeating Values: ', repeatingNumber)
+// console.log('Unique Values: ', result4)
+console.log('Unique: ', unique)
 
 // indexOf -> first occurence index will be given, incase of multiple values
 
@@ -74,11 +97,19 @@ console.log('Repeating Values: ', repeatingNumber)
 
 let values = [2, 4, 5, 6 ,7 ,8];
 
-const result5 = values.reduce((sum, currentValue) => {
-    return sum + currentValue
+const result5 = values.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue
 });
 
+// values.reduce(function());
+
+const result7 = values.reduce((accumulator, currentValue) => {
+    return accumulator * currentValue
+}, 100);
+// values.reduce(function, intialValue);
+
 console.log('Sum: ', result5);
+console.log('Sum with 100: ', result7)
 
 // acc - 2 current - 4
 // acc + currentValue = 6 -> acc
